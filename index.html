@@ -12,7 +12,8 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <img  class="logo" src="logo.svg" alt="">
+        <img class="logo" src="logo.svg" alt="Logo">
+        <div class="hamburger">☰</div> <!-- Hamburger icon -->
         <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#plans">Plans</a>
@@ -128,25 +129,24 @@
             </div>
         </div>
     </section>
-    <section class="parc" style="display: flex; align-items: center; justify-content: space-around; max-width: 1200px; margin: auto; padding: 20px 20px;">
+    <section class="parc">
         <!-- Left Content -->
-        <div style="max-width: 50%;">
-            
-            <h1 class="park" style="font-size: 2rem;;     font-weight: 700px ; color: #ffffff; font-weight: bold;">
+        <div class="left-content">
+            <h1 class="park">
                 La Gestion Parfaite De Votre Parc Informatique Avec Apple, Dès Le Premier Clic.
             </h1>
             <br>
-            <p class="parke" style="font-size: 20px; font-weight: 400px; color: #ffffff; line-height: 1.5;">
+            <p class="parke">
                 Délivrez Des Solutions Immédiatement Opérationnelles à Vos Collaborateurs Et Facilitez La Vie De Vos équipes IT !
             </p>
-            <p class="parke" style="font-size: 20px; font-weight: 400px; color: #ffffff; line-height: 1.5;">
+            <p class="parke">
                 Transformez En Simple Formalité La Pré-configuration, La Mise à Disposition, La Personnalisation Et La Gestion De Vos Equipements Apple.
             </p>
         </div>
-
+    
         <!-- Right Image -->
-        <div style="width: 50%; display: flex; justify-content: center;">
-            <img src="VIGNETTE-GESTION-DE-PARC.png" alt="Apple Business" style="width: 80%; height: auto; max-height: 80vh; object-fit: cover; border-radius: 10px;">
+        <div class="right-image">
+            <img src="VIGNETTE-GESTION-DE-PARC.png" alt="Apple Business">
         </div>
     </section>
     <section class="enterprise-clients">
@@ -352,6 +352,15 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", scrollHandler);
     scrollHandler(); // Trigger scroll event on page load
 });
+// Toggle the navigation menu when hamburger icon is clicked
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show'); // Toggle the "show" class on the nav links
+    hamburger.classList.toggle('active'); // Optionally add active class to hamburger for visual feedback
+});
+
 
    </script>
 
