@@ -51,6 +51,77 @@ body {
 .nav-links a:hover {
     color: grey;
 }
+.navbar .logo {
+    width: 150px; /* Adjust logo size */
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.navbar .nav-links a:hover {
+    color: #42413e; /* Change color on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px;
+    }
+
+    .navbar .nav-links {
+        display: none; /* Hide links by default on smaller screens */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 70px; /* Adjust the position */
+        right: 0;
+        background-color: #020202;
+        width: 100%;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .navbar .nav-links a {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .navbar .nav-links.show {
+        display: flex; /* Show the links when toggle is active */
+    }
+
+    .navbar .logo {
+        width: 120px;
+    }
+}
+
+/* Hamburger menu for smaller screens */
+@media (max-width: 768px) {
+    .navbar .hamburger {
+        display: block; /* Show hamburger menu */
+        cursor: pointer;
+        font-size: 30px;
+        color: #fff;
+    }
+
+    .navbar .hamburger.active {
+        background-color: #605f5a; /* Change color when active */
+    }
+}
+
+/* Basic styling for hamburger icon */
+.hamburger {
+    display: none;
+}
+
 
 /* Hero Section */
 .hero {
