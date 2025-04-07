@@ -753,3 +753,100 @@ img{
 .social-icons i {
     font-size: 30px; /* Adjust size as needed */
 }
+/* Base styles for the section */
+.parc {
+    display: flex;
+    flex-wrap: wrap;  /* Allows content to wrap on smaller screens */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Left Content */
+.left-content {
+    flex: 1;
+    max-width: 50%;
+    padding-right: 20px;
+}
+
+h1.park {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+p.parke {
+    font-size: 20px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+/* Right Image */
+.right-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.right-image img {
+    width: 80%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .parc {
+        flex-direction: column;  /* Stack the content vertically on tablets */
+        padding: 10px;
+    }
+
+    .left-content {
+        max-width: 100%;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .right-image {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .right-image img {
+        width: 90%;
+    }
+
+    h1.park {
+        font-size: 1.5rem;
+    }
+
+    p.parke {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .left-content {
+        max-width: 70%;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .right-image img {
+        width: 70%;
+    }
+
+    h1.park {
+        font-size: 1.2rem;
+    }
+
+    p.parke {
+        font-size: 16px;
+    }
+}
+
