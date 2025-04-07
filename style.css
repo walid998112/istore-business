@@ -1,0 +1,684 @@
+
+:root {
+    --gold: #ffffff;
+    --noir: #1a1a1a;
+    --blanc: #f5f5f7;
+    --ease: cubic-bezier(0.23, 0.32, 0.32, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background: var(--noir);
+    color: var(--blanc);
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(18, 18, 18, 0.95);
+    padding: 1.9rem 3%;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    height: 60px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+
+}
+
+.nav-links a {
+    color: var(--blanc);
+    text-decoration: none;
+    font-size: large;
+    font-weight: 600;
+    transition: color 0.3s var(--ease);
+}
+
+.nav-links a:hover {
+    color: grey;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)),
+                url('https://sm.pcmag.com/t/pcmag_me/news/a/apple-offi/apple-officially-announces-wonderlust-iphone-15-event_4e92.3840.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(45deg, #f5f5f7 50%, #e8b923);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Pricing Section */
+.pricing {
+    padding: 8rem 5%;
+    background: rgb(5, 5, 5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 18px;
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.3);
+}
+
+.pricing-card::before {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgb(135, 129, 94),);
+ 
+}
+
+.pricing-card:hover::before {
+    top: -25%;
+    left: -25%;
+    width: 150%;
+    height: 150%;
+}
+
+.plan-name {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.04em;
+}
+
+.plan-features {
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.plan-features li {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.plan-features li:last-child {
+    border-bottom: none;
+}
+
+.plan-features li i {
+    color: var(--gold);
+    font-size: 0.9rem;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 2rem 0;
+    position: relative;
+    display: inline-block;
+}
+
+.price::before {
+    content: 'à partir de';
+    position: absolute;
+    top: -1.2rem;
+    left: 0;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+}
+
+.cta-button {
+    background: var(--gold);
+    color: var(--noir);
+    border: none;
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s var(--ease);
+    letter-spacing: 0.03em;
+}
+
+.cta-button:hover {
+    background: #444343;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 4px 8px 16px rgba(255, 255, 255, 0.133);
+}
+footer {
+    background: var(--noir);
+    color: var(--blanc);
+    padding: 4rem 5%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.288);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.footer-section h4 {
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+.footer-section p, .footer-section a {
+    color: var(--blanc);
+    text-decoration: none;
+    margin: 0.5rem 0;
+    display: block;
+}
+
+.footer-section a:hover {
+    color: grey;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: var(--blanc);
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: grey;
+}
+@keyframes borderEffect {
+    0% { transform: rotate(45deg) translate(-50%, -50%); }
+    100% { transform: rotate(45deg) translate(50%, 50%); }
+}
+
+.logo {
+    max-width: 201px;
+    height: 41px;
+}
+
+
+a {
+    color: var(--noir);
+    text-decoration: none;
+}
+.pricing-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 18px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+    position: relative;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .pricing-card {
+        padding: 2rem;
+        margin: 0;
+    }
+}
+
+/* New Responsive Footer */
+footer {
+    background: var(--noir);
+    color: white;
+    padding: 4rem 5%;
+    border-top: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    padding: 1rem;
+}
+
+.footer-section h4 {
+    color:white;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-section p, 
+.footer-section a {
+    color: rgba(245, 245, 247, 0.8);
+    text-decoration: none;
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+/* Tablet Footer */
+@media (min-width: 600px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop Footer */
+@media (min-width: 1024px) {
+    .footer-content {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .footer-section {
+        padding: 0 1rem;
+    }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .plan-name {
+        font-size: 1.3rem;
+    }
+    
+    .price {
+        font-size: 1.8rem;
+    }
+    
+    .cta-button {
+        font-size: small;
+        padding: 0.8rem;
+    }
+    
+    .hero h1 {
+        font-size: 5rem;
+    }
+    .plan-features li{
+        font-size: small;
+    }
+    .pricing-grid{
+        display: flex;
+        flex-direction:column;
+        flex-wrap: wrap;
+        width: 350px;
+    }
+    .nav-links a{
+        font-size: 15px;
+    }
+    img{
+        width: 130px;
+    }
+}
+.detail-hero {
+    padding: 120px 5% 60px;
+    min-height: 60vh;
+}
+
+.plan-details {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 5%;
+}
+
+.feature-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s var(--ease);
+}
+
+.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.detail-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .detail-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+/* Add to existing CSS */
+.detail-hero {
+    background: linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.9)),
+                url('your-hero-image.jpg') center/cover;
+    text-align: center;
+    color: var(--blanc);
+}
+
+.feature-animate h3 {
+    color: var(--gold);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.feature-animate {
+    background: rgba(255,255,255,0.03);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255,215,0,0.1);
+}
+.advantages {
+    padding: 6rem 5%;
+    background: var(--noir);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    color: var(--blanc);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin: 1rem auto;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.advantage-card {
+    background: rgba(255,255,255,0.03);
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255,215,0,0.1);
+    transition: transform 0.3s var(--ease);
+}
+
+.advantage-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background: rgba(255,215,0,0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.icon-wrapper i {
+    font-size: 1.8rem;
+    color: var(--gold);
+}
+
+/* MDM Section */
+.mdm-section {
+    padding: 6rem 5%;
+    background: linear-gradient(45deg, #1a1a1a 0%, #2a2a2a 100%);
+}
+
+.mdm-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: auto auto auto auto;
+}
+
+.mdm-text {
+    flex: 1;
+}
+
+.mdm-visual {
+    flex: 1;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.mdm-visual img {
+    width: 580px;
+    height: 350px;
+    margin-top: 100px;
+    border-radius: 16px;
+}
+
+.mdm-feature {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.03);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+
+.mdm-feature i {
+    font-size: 1.8rem;
+    color: var(--gold);
+    min-width: 50px;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .advantages-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .mdm-content {
+        flex-direction: row;
+    }
+
+    .mdm-visual {
+        height: 500px;
+        width: 200px;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .mdm-feature {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mdm-feature i {
+        margin-bottom: 1rem;
+    }
+    .mdm-visual img {
+        width: 450px;
+        height: 250px;
+        margin-top: 100px;
+        border-radius: 16px;
+    }
+}
+img{
+    width: 200px;
+    height: 200px;
+}
+
+.enterprise-clients {
+    padding: 6rem 5%;
+    background: linear-gradient(45deg, #0a0a0a, #1a1a1a);
+}
+
+.logos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+}
+
+.logo-card {
+    background: rgba(255,255,255,0.03);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(255,215,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.logo-card:hover {
+    transform: translateY(-5px);
+}
+
+.client-logo {
+    width: 285px;
+    margin-bottom: 1.5rem;
+   
+}
+
+
+
+.client-info h3 {
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+.client-info p {
+    font-style: italic;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.6;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 800px;
+    margin: 4rem auto;
+    text-align: center;
+}
+
+.stat-item {
+    padding: 2rem;
+    background: rgba(255,215,0,0.05);
+    border-radius: 12px;
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--gold);
+}
+
+.stat-label {
+    color: rgba(255,255,255,0.8);
+    margin-top: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logos-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .parc {
+        display: flex;
+        flex-direction: column;
+       
+        
+    }
+    .park{
+        width: 350px;
+        
+    }
+    .parke{
+        width: 350px;
+    }
+}
+.stat-value[data-target="150"]::after {
+    content: "+";
+}
+
+.stat-value[data-target="98"]::after {
+    content: "%";
+}
+
+.stat-value[data-target="7"]::after {
+    content: "/7";
+}
+
+#apr{
+    width: 34px;
+    margin-top: 10px;
+}
+
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animation.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.social-icons i {
+    font-size: 30px; /* Adjust size as needed */
+}
