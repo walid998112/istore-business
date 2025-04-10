@@ -357,10 +357,12 @@ const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('show'); // Toggle the "show" class on the nav links
-    hamburger.classList.toggle('active'); // Optionally add active class to hamburger for visual feedback
+    navLinks.classList.toggle('show');
+    hamburger.classList.toggle('active');
 });
-        const navItems = document.querySelectorAll('.nav-links a');
+
+// Close the menu when a nav link is clicked (mobile)
+const navItems = document.querySelectorAll('.nav-links a');
 navItems.forEach(item => {
     item.addEventListener('click', () => {
         navLinks.classList.remove('show');
