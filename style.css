@@ -563,9 +563,9 @@ footer {
 }
 
 .mdm-visual img {
-    width: 580px;
+    width: 100%;
     height: 350px;
-    margin-top: 140px;
+    margin-top: 150px;
     border-radius: 16px;
 }
 
