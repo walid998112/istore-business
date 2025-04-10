@@ -360,6 +360,13 @@ hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('show'); // Toggle the "show" class on the nav links
     hamburger.classList.toggle('active'); // Optionally add active class to hamburger for visual feedback
 });
+        const navItems = document.querySelectorAll('.nav-links a');
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+        hamburger.classList.remove('active');
+    });
+});
 
 
    </script>
