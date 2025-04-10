@@ -548,7 +548,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    max-width: 1400px;
+    max-width: 1300px;
     margin: auto auto auto auto;
 }
 
