@@ -758,7 +758,7 @@ img{
     display: flex;
     flex-wrap: wrap;  /* Allows content to wrap on smaller screens */
     justify-content: space-between;
-    align-items: baseline;
+
     max-width: 1200px;
     margin: auto;
     padding: 20px;
