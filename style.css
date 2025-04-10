@@ -759,9 +759,9 @@ img{
     flex-wrap: wrap;  /* Allows content to wrap on smaller screens */
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
-    padding: 20px;
+    padding: 40px;
 }
 
 /* Left Content */
