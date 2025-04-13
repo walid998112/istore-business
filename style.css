@@ -832,9 +832,9 @@ p.parke {
 
 @media (max-width: 600px) {
     .left-content {
-        max-width: 70%;
+        max-width: 90%;
         padding-right: 0;
-        text-align: center;
+        text-align: left;
     }
 
     .right-image img {
