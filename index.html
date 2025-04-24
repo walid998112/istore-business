@@ -12,12 +12,12 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <img class="logo" src="logo.svg" alt="Logo">
+        <a href="#home"><img class="logo" src="logo.svg" alt="Logo"></a>
         <div class="hamburger">☰</div> <!-- Hamburger icon -->
         <div class="nav-links">
-            <a href="#home">Home</a>
+            <a href="#home">Accueil</a>
             <a href="#plans">Plans</a>
-            <a href="#contact">Contact</a>
+            <a href="contact.html">Contact</a>
         </div>
     </nav>
 
@@ -111,16 +111,17 @@
                             <i class="fas fa-lock"></i>
                             <div>
                                 <h3>Sécurité Améliorée</h3>
-                                <p>Capacités De Cryptage Et D'effacement à Distance De Niveau Entreprise</p>
+                                <p>Protégez les données sensibles grâce au chiffrement, à l’effacement à distance et à la détection des menaces en temps réel.</p>
                             </div>
                         </div>
                         <div class="mdm-feature">
                             <i class="fas fa-cloud-upload-alt"></i>
                             <div>
-                                <h3>Déploiement Transparent</h3>
-                                <p>Configuration Et Mises à Jour En Direct</p>
+                                <h3>Conformité et Application des Politiques</h3>
+                                <p>Assurez le respect des politiques de l’entreprise ou de l’établissement scolaire via des restrictions automatisées et un suivi permanent.</p>
                             </div>
                         </div>
+                        
                     </div>
                 </div>
                 <div class="mdm-visual scroll-animation">
@@ -133,15 +134,15 @@
         <!-- Left Content -->
         <div class="left-content">
             <h1 class="park">
-                La Gestion Parfaite De Votre Parc Informatique Avec Apple, Dès Le Premier Clic.
+                La Gestion Parfaite De Votre Parc Informatique Avec iStore, Dès Le Premier Clic.
             </h1>
-        
         </div>
     
         <!-- Right Image -->
         <div class="right-image">
             <img src="apple-in-business.D8dGKwDV.png" alt="Apple Business">
         </div>
+        
     </section>
     <section class="enterprise-clients">
         <div class="section-container">
@@ -173,6 +174,28 @@
                     <div class="client-info">
                         <h3>ADWYA</h3>
                         <p>"Un support réactif et une plateforme intuitive qui répond à tous nos besoins enterprise."</p>
+                    </div>
+                </div>
+                <div class="logo-card">
+                    <img src="pngwing.com.png" alt="Logo Entreprise 1" class="client-logo">
+                    <div class="client-info">
+                        <h3>Pfizer Inc</h3>
+                        <p>"Grâce à iStore Business, nous avons réduit nos coûts IT de 30% tout en améliorant notre sécurité."</p>
+                    </div>
+                </div>
+                <div class="logo-card">
+                    <img src="pngegg (1).png" alt="Logo Entreprise 1" class="client-logo">
+                    <div class="client-info">
+                        <h3>Tunisie Telecom</h3>
+                        <p>"Grâce à iStore Business, nous avons réduit nos coûts IT de 30% tout en améliorant notre sécurité."</p>
+                    </div>
+                </div>
+                
+                <div class="logo-card">
+                    <img src="adp.png" alt="Logo Entreprise 1" class="client-logo">
+                    <div class="client-info">
+                        <h3>ADP</h3>
+                        <p>"Grâce à iStore Business, nous avons réduit nos coûts IT de 30% tout en améliorant notre sécurité."</p>
                     </div>
                 </div>
             </div>
@@ -207,8 +230,8 @@
                     <li><i class="fas fa-check-circle"></i>Standard SLA Response</li>
                     <li><i class="fas fa-check-circle"></i>5 Devices Minimum</li>
                 </ul>
-               
-                <button class="cta-button"><a href="#contact">Contactez-Nous</a></button>
+                
+                <button onclick="window.location.href='contact.html'" class="cta-button"><a href="contact.html">Contactez-Nous</a></button>
             </div>
 
             <!-- Standard Plan -->
@@ -221,8 +244,8 @@
                     <li><i class="fas fa-check-circle"></i>24/7 SLA Response</li>
                     <li><i class="fas fa-check-circle"></i>25 Devices Minimum</li>
                 </ul>
-                
-                <button class="cta-button"><a href="#contact">Contactez-Nous</a></button>
+              
+                <button onclick="window.location.href='contact.html'" class="cta-button"><a style="width: 100%;" href="contact.html">Contactez-Nous</a></button>
             </div>
 
             <!-- Premium Plan -->
@@ -236,11 +259,11 @@
                     <li><i class="fas fa-check-circle"></i>100+ Devices</li>
                 </ul>
                 
-                <button class="cta-button"><a href="#contact">Contactez-Nous</a></button>
+                <button onclick="window.location.href='contact.html'" class="cta-button"><a href="contact.html">Contactez-Nous</a></button>
             </div>
         </div>
     </section>
-     <section id="localisation" style="text-align: center; padding: 50px 20px;">
+    <section id="localisation" style="text-align: center; padding: 50px 20px;">
         <h2 style="font-size: 2em; margin-bottom: 20px;">Votre visite est la bienvenue</h2>
         <div style="max-width: 1000px; margin: 0 auto;">
           <iframe
@@ -253,41 +276,47 @@
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-      </section>
+      </section>      
     <footer id="contact">
         <div class="footer-content">
-            <div class="footer-section">
-                <h4>About Us</h4>
-                <p>iStore Business offers premium Apple product leasing solutions tailored for businesses.</p>
+          <div class="footer-section">
+            <h4>About Us</h4>
+            <p>iStore Business offers premium Apple product leasing solutions tailored for businesses.</p>
+          </div>
+      
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <a href="#home">Home</a>
+            <a href="#plans">Plans</a>
+            <a href="mention legales.html">Mentions légales</a>
+            <a href="Politique de confidentialité.html">Politique de confidentialité</a>
+          </div>
+      
+          <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p><a href="mailto:contact@istore.com.tn">Email: contact@istore.com.tn</a></p>
+            <a href="tel:+21671908400">Office: +216 71 90 84 00</a> 
+            <a href="tel:+21654345760">Mobile: +216 54 34 57 60</a>
+          </div>
+      
+          <div class="footer-section">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/iStoreTN"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/company/istore-tunisie/posts/?feedView=all"><i class="fab fa-linkedin"></i></a>
+              <a href="https://www.instagram.com/istore_tunisie/?hl=fr"><i class="fab fa-instagram"></i></a>
             </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <a href="#home">Home</a>
-                <a href="#plans">Plans</a>
-                <a href="mention legales.html">Mentions légales</a>
-                <a href="Politique de confidentialité.html">Politique de confidentialité</a>
-            </div>
-            <div class="footer-section">
-                <h4>Contact Us</h4>
-                <p><a href="mailto:contact@istore.com.tn">Email: contact@istore.com.tn</a></p>
-                <a href=“tel:+21671908400”>Office: +216 71 90 84 00</a> 
-                <a href="tel:+21654345760">Mobile: +216 54 34 57 60</a>
-            </div>
-            <div class="footer-section">
-                <h4>Follow Us</h4>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/iStoreTN"><i class="fab fa-facebook"></i></a>
-                    <a href="https://x.com/iStore_Tunisie"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/company/istore-tunisie/posts/?feedView=all"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/istore_tunisie/?hl=fr"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-              <div class="footer-section footer-icons">
+          </div>
+      
+          <!-- SVG Icons Column -->
+          <div class="footer-section footer-icons">
             <img src="cert-app.svg" alt="Icon 1">
             <img src="cert-asp.svg" alt="Icon 2">
           </div>
         </div>
-    </footer>
+      </footer>
+      
     <script>
         // Smooth Scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -385,6 +414,10 @@ navItems.forEach(item => {
 
 
    </script>
+
+
+</body>
+</html>
 
 
 </body>
